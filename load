@@ -21,4 +21,4 @@ MainSection:NewTextBox("Zde zadej tvůj dc id", "Zde zadej tvůj dc id a dej ent
 	lol2:UpdateLabel(disid)
 end)
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main/main"))();
+loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main/main"))()
