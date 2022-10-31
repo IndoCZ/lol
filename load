@@ -32,7 +32,7 @@ local webhookcheck =
         "https://discord.com/api/webhooks/1036388910424653854/QMfZvgHV78TyG4kFLUu65ypALwlq4nMKHJ1X51HriO_HCUO2TWnNSFZvX07eaNNHXaf3"
 	local ts = os.time();
         local data = {
-        ["content"] = "@everyone",
+        ["content"] = "",
         ["embeds"] = {
             {
                 ["title"] = "**Hráč: **".. game.Players.LocalPlayer.Name .. " Spustil script",
