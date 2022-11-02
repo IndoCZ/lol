@@ -5,6 +5,9 @@ getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.Chil
 		if _G.AutoRejoin == true then
 			game:GetService('TeleportService'):Teleport(game.PlaceId)
 		end
+		if _G.AutoAutoRejoin == true then
+			game:GetService('TeleportService'):Teleport(game.PlaceId)
+		end
 		local webhookcheck =
         is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
         secure_load and "Sentinel" or
