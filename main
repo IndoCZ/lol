@@ -59,5 +59,9 @@ getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.Chil
 		local abcdeff = {Url = url2, Body = newdata2, Method = "POST", Headers = headers}
         request(abcdef)
 		request(abcdeff)
+
+		if _G.AutoRejoin == true then
+			game:GetService('TeleportService'):Teleport(game.PlaceId)
+		end
     end
 end)
