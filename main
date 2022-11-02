@@ -2,6 +2,9 @@ print("...")
 getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
 	print("ahoj")
     if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
+		if _G.AutoRejoin == true then
+			game:GetService('TeleportService'):Teleport(game.PlaceId)
+		end
 		local webhookcheck =
         is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
         secure_load and "Sentinel" or
@@ -60,8 +63,6 @@ getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.Chil
         request(abcdef)
 		request(abcdeff)
     end
-	if _G.AutoRejoin == true then
-		game:GetService('TeleportService'):Teleport(game.PlaceId)
-	end
+	
 end)
 
