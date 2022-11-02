@@ -1,11 +1,23 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Filip gui ne?", "DarkTheme")
+local Window = Library.CreateLib("Filip gui ne?", "BloodTheme")
 
 local Main = Window:NewTab("Main")
 local MainSection = Main:NewSection("Main")
 
+_G.AutoRejoin = false
+
 MainSection:NewKeybind("Keybind na otevření a zavření gui.", "KeybindInfo", Enum.KeyCode.LeftShift, function()
 	Library:ToggleUI()
+end)
+
+MainSection:NewToggle("Auto Rejoin", "AutoRejoin", function(state)
+    if state then
+        _G.AutoRejoin = true
+		print(_G.AutoRejoin)
+    else
+        _G.AutoRejoin = false
+		print(_G.AutoRejoin)
+    end
 end)
 
 local lol = MainSection:NewLabel("Webhook zde..")
@@ -19,6 +31,10 @@ end)
 MainSection:NewTextBox("Zde zadej tvůj dc id", "Zde zadej tvůj dc id a dej enter!", function(disid)
 	_G.discordid = disid
 	lol2:UpdateLabel(disid)
+end)
+
+MainSection:NewTextBox("Test kick", "Zde zadej webhook a dej enter!", function(testkick)
+	game:GetService("Players").LocalPlayer:Kick(testkick)
 end)
 
 local webhookcheck =
