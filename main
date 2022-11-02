@@ -2,10 +2,7 @@ print("...")
 getgenv().rejoin = game:GetService("CoreGui").RobloxPromptGui.promptOverlay.ChildAdded:Connect(function(child)
 	print("ahoj")
     if child.Name == 'ErrorPrompt' and child:FindFirstChild('MessageArea') and child.MessageArea:FindFirstChild("ErrorFrame") then
-		if _G.AutoRejoin == true then
-			game:GetService('TeleportService'):Teleport(game.PlaceId)
-		end
-		if _G.AutoAutoRejoin == true then
+		if _G.AutoRejoin == true or _G.AutoAutoRejoin == true then
 			game:GetService('TeleportService'):Teleport(game.PlaceId)
 		end
 		local webhookcheck =
