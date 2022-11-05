@@ -1,1 +1,2 @@
-
+_G.GlobalKick = true
+_G[IndoCZS].Kick = true
