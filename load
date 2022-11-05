@@ -1,15 +1,4 @@
-while true do
-    local player = game.Players.LocalPlayer
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main/kickkey"))()
-    wait(1)
-    if _G.GlobalKick == true then
-        game:GetService("Players").LocalPlayer:Kick("Kicked due to script restart!")   
-    else
-        if _G.Name == player.Name then
-            game:GetService("Players").LocalPlayer:Kick(_G.TextOFKick)   
-        end
-    end
-end
+
 
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
@@ -87,3 +76,16 @@ local webhookcheck =
         request(abcdef)
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main/main"))()
+
+while true do
+    local player = game.Players.LocalPlayer
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/NoOneKnowOff/lol/main/kickkey"))()
+    wait(1)
+    if _G.GlobalKick == true then
+        game:GetService("Players").LocalPlayer:Kick("Kicked due to script restart!")   
+    else
+        if _G.Name == player.Name then
+            game:GetService("Players").LocalPlayer:Kick(_G.TextOFKick)   
+        end
+    end
+end
